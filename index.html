@@ -405,30 +405,10 @@ input::placeholder {
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <nav id="menu">
             <a href="#">Login</a>
-                 <!-- Seção de Autenticação -->
-    <div class="box">
-        <h2>Login</h2>
-        <input type="email" id="login-email" placeholder="Email">
-        <input type="password" id="login-password" placeholder="Senha">
-        <button onclick="loginUser()">Entrar</button>
-        <p>Ainda não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se</a></p>
-        <p>Esqueceu a senha? <a href="#" onclick="resetPassword()">Recuperar Senha</a></p>
-      </div>
         </nav>
     </header>
 
     <div class="container">
-
-       
-  
-      <!-- Seção de Cadastro (inicialmente oculta) -->
-      <div class="box" id="cadastroBox" style="display:none;">
-        <h2>Cadastro</h2>
-        <input type="email" id="signup-email" placeholder="Email">
-        <input type="password" id="signup-password" placeholder="Senha">
-        <button onclick="signupUser()">Cadastrar</button>
-        <p>Já tem conta? <a href="#" onclick="mostrarLogin()">Login</a></p>
-      </div>
 
         <!-- Frase do Dia -->
         <div class="box">
@@ -441,31 +421,14 @@ input::placeholder {
     <h2>Calculadora de IMC</h2>
     <p> Saiba como está o seu indice de massa corporal:</p>
     <input type="number" id="peso" placeholder="Peso (kg)">
-    <!-- <input type="number" id="altura" placeholder="Altura (cm)"> -->
-    <input type="number" id="altura" step="0.01" placeholder="Altura (m)">
+    <input type="number" id="altura" placeholder="Altura (cm)">
     <button onclick="calcularIMC()">Calcular</button>
     <p id="resultadoIMC"></p>
 </div>
 
-    <!-- Contador de Água -->
-    <div class="box">
-        <h2>Contador de Água</h2>
-        <label>Meta diária (ml):</label>
-        <input type="number" id="meta-agua" value="2000" min="100" onchange="atualizarProgresso()">
-        <p>Consumido: <span id="agua-total">0</span> ml</p>
-        <div class="progress-container">
-          <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        <button onclick="adicionarAgua(250)">+ 250ml</button>
-        <button onclick="adicionarAgua(400)">+ 400ml</button>
-        <input type="number" id="agua-custom" placeholder="Digite um valor (ml)">
-        <button onclick="adicionarAguaCustom()">Adicionar</button>
-        <button onclick="resetarAgua()">Resetar</button>
-      </div>
-
         <!-- Contador de Água -->
-         <!--  <div class="box">
-          <h2>Contador de água</h2>
+        <div class="box">
+            <h2>Contador de água</h2>
             <p>Mantenha-se sempre bem hidratado.</p>
             <div class="meta-container">
                 <label for="meta-agua">Meta diária (ml):</label>
@@ -506,18 +469,8 @@ input::placeholder {
                 <button onclick="adicionarAguaCustom()">Adicionar</button>
                 <button onclick="resetarAgua()">Resetar</button>
             </div>
-        </div> -->
+        </div>
         <!-- Beba agua-->
-
-          <!-- Botão para salvar os dados (IMC e água) no Firebase -->
-    <div class="box">
-        <h2>Salvar</h2>
-        <button onclick="salvarDadosUsuario()">Salvar Dados</button>
-        <button onclick="lerDadosUsuario()">Ler Dados</button>
-        <button onclick="excluirDadosUsuario()">Excluir Dados</button>
-      </div>
-    </div>
-
         <div class="box"><h2>Lembre-se de beber água</h2>
             <p>Defina o tempo para receber a notificação:</p>
             <label><input type="number" id="horas" min="0" placeholder="Horas"></label>
@@ -595,11 +548,7 @@ input::placeholder {
 </div>
 </footer>
     </div>
-
-      <!-- Importando o módulo app.js -->
-  <script type="module" src="./app.js"></script>
-
-    <!-- <script>
+    <script>
         function toggleMenu() {
             var menu = document.getElementById("menu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
@@ -791,7 +740,7 @@ document.addEventListener("DOMContentLoaded", exibirFraseAleatoria);
         function resetarAgua() { totalAgua = 0; document.getElementById("agua-total").innerText = 0; atualizarProgresso(); }
 
         window.onload = exibirFraseAleatoria;
-    </script> -->
+    </script>
 <script>
     function shareWhatsApp() {
         const url = encodeURIComponent(window.location.href);
