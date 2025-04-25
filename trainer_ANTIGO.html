@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BLOG - Estética e Saúde Academia">
+    <meta property="og:description" content="Saúde, beleza e performance em um só lugar!">
+    <meta property="og:image" content="https://i.imgur.com/ln8inqr.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tomdrd.github.io/V3">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="..//img/icon-192.png">
+    <link rel="manifest" href="manifest.json"><!-- IMPORTANTE ESTUDAR SOBRE ISSO --> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <title>-Estética e Saúde Academia</title>
+
+  <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+<link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+<!-- <link rel="stylesheet" href="../css/style.css"> -->
+</head>
+
+<!-- <body class="light"> -->
+<body >
+
+
+    <header class="max responsive laranja-primario">
+        <nav>
+            <!-- aqui vai ser outro botao de login ou mais coisa para depois -->
+            <!-- login no caso vai abrir uma pagina separada so para ela -->
+            <button data-ui="#painel" class="circle transparent">
+                <i>menu</i>
+            </button>
+            <h5 class="max">Estética e Saúde Academia</h5>
+            
+            <!-- envolver o botão com <a> para clique -->
+            <a href="../paginas/login.html">
+                <button class="circle transparent">
+                    <i>account_circle</i>
+                    <div class="tooltip bottom">Fazer Login</div>
+                </button>
+            </a>
+
+            <a href="../paginas/blog.html">
+                <button class="circle transparent">
+                    <i>newspaper</i>
+                    <div class="tooltip bottom">Blog</div>
+                </button>
+            </a>
+
+         
+            <button class="circle transparent">
+                <i>more_vert</i>
+            </button>
+        </nav>
+    </header>
+
+
+<!-- PAINEL -->
+    <dialog id="painel" class="left">
+        <nav class="drawer max">
+            <header>
+                <nav>
+                    <!-- logo ou img de perfil -->
+                    <img class="circle" src="../img/beer-and-woman.svg">
+                    <h6>Estética e Saúde Academia</h6>
+                </nav>
+            </header>
+            <a href="../paginas/login.html">
+                <i>inbox</i>
+                <span class="max">Login/Cadastro</span>
+            </a>
+            <a data-ui="#tab1">
+                <i>send</i>
+                <span>Calculadora de IMC</span>
+            </a>
+            <a data-ui="#tab2">
+                <i>favorite</i>
+                <span> Contador de água</span>
+            </a>
+            <a data-ui="#tab3">
+                <i>delete</i>
+                <span> Calculadora de Gasto Calórico </span>
+            </a>
+            <hr>
+            <label>opções</label>
+            <a data-ui="#tab4">
+                <i>fiber_manual_record</i>
+                <span>Lembre-se de beber água</span>
+            </a>
+        </nav>
+        <nav class="right-align">
+            <button class="border">Cancel</button>
+            <button>Confirm</button>
+        </nav>
+    </dialog>
+
+
+<!-- TAB IDS -->
+    <nav class="bottom inverse-primary">        
+        <div class="tabs responsive">
+            <!-- TABS ICNONES tuod dentro i é icone -->
+            <a class="active" data-ui="#tab1" tabindex="0"><i class="extra">fitness_center</i><span>Imc</span></a>
+            <a data-ui="#tab2" tabindex="0" class=""><i class="extra">dishwasher_gen</i><span>Contador de águaa<span></a>
+            <a data-ui="#tab3" tabindex="0" class=""><i class="extra">monitoring</i><span>Calculadora de Gasto Calórico</span></a>
+            <a data-ui="#tab4" tabindex="0" class=""><i class="extra">quiz</i><span>Quiz de Emoções</span></a>
+            <a data-ui="#tab5" tabindex="0" class=""><i class="extra">notifications_active</i><span>Lembre-se de beber água</span></a>
+        </div>
+    </nav>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <main class="responsive black">
+
+ 
+        <div class="medium-space"></div>
+
+        <!--TAB VIEWR-->
+        <div>
+            <!-- Calculadora de IMC -->
+            <div class="page padding active" id="tab1">
+
+                <!-- add sequecia -->
+                <article id="addSequencia" class="borda" data-ui="#dialog-sequencia">
+                    <h5>+Adicionar Nova Sequencia</h5>
+                
+                </article>
+                
+                
+                <!-- sequecia DIALOG -->
+                <div class="overlay blur"></div>
+                <dialog id="dialog-sequencia">
+                    <div class="field label border fill">
+                        <input id="nomeSequencia" type="text">
+                        <label>Nome da Sequencia</label>
+                    </div>
+                    <nav class="right-align no-space">
+                        <button class="transparent link" data-ui="#dialog-sequencia">Cancelar</button>
+                        <button class="transparent fill link" id="btn-salvarSequ" data-ui="#dialog-sequencia">Salvar</button>
+                    </nav>
+                
+                </dialog>
+
+
+
+ div
+
+
+
+
+             
+                <!-- <article class="bg-dark">
+                    <h5>Sequencia 1</h5>
+                 <div class="space"></div>
+                    <div class="tas responsive">
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>treino 1</span>
+                      </button>
+                  
+
+                     </div>
+                  </article> -->
+
+            
+
+            </div>
+            <!-- Contador de água -->
+            <div class="page padding" id="tab2">
+                <article class="secondary-container">
+     
+                    add sequencia A
+    add/lista de exercícios 
+    (Supino reto,supino inclinado, crossover na polia alta,Peck deck)
+    add repetição 4x
+    add carga 0
+    nome treino peitoral 
+    add treino
+    add exercicio?
+    add repetição 
+    selecionar dias
+    seleciona tipo
+
+<article>
+    <fieldset>
+        <legend>Criar Rotina de Treino</legend>
+        <nav class="vertical">
+            <!-- <div class="max">
+                <h6 class=" ">Headline</h6>
+                <div>Supporting text</div>
+            </div> -->
+            <div class="field label border responsive">
+                <input type="text">
+                <label>Adicionar Sequência</label>
+            </div>
+            <div class="field label border responsive">
+                <input type="text">
+                <label>Adicionar Exercícios</label>
+            </div>
+            <legend>Adicionar Repetições</legend>
+            <div class="row">
+                <button class="border square round" id="btn-rep-add">
+                    <i>add</i>
+                </button>
+                <div class="field label border round">
+                    <input type="number" value="0" id="inp_repeticao">
+                    <label>Repetições</label>
+                </div>
+                <button class="border square round" id="btn-rep-remove">
+                    <i>remove</i>
+                </button>
+            </div>
+            <label>Dias de Treino</label>
+            <!-- dias -->
+            <nav>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Seg</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Ter</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Qua</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Qui</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Sex</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Sab</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+                <div class="vertical" style=" align-items: center;">
+                    <span>Dom</span>
+                    <label class="checkbox">
+                        <input type="checkbox"><span></span>
+                    </label>
+                </div>
+            </nav>
+        </nav>
+    </fieldset>
+    <!--  -->
+    <!-- <ul class="list border">
+  <li>
+    <div class="max">
+      <h6 class="small">Add nome do treino</h6>
+      <div>Supporting text</div>
+    </div>
+    <div class="field middle-align">
+                <div class="row">
+                    <div class="field large prefix round fill active">
+                        <input class="searchBox">
+                        <menu class="min" style="top: 4rem;">
+                            <li>
+                                <i>history</i>
+                                <div>Item 1</div>
+                            </li>
+                            <li>
+                                <i>history</i>
+                                <div>Item 2</div>
+                            </li>
+                            <li>
+                                <i>history</i>
+                                <div>Item 3</div>
+                            </li>
+                        </menu>
+                    </div>
+                </div>
+            </div>
+  </li>
+  <li>
+    <div class="max">
+      <h6 class=" ">Headline</h6>
+      <div>Supporting text</div>
+    </div>
+    <a data-ss1743966217="1">Link</a>
+    <button>Button</button>
+  </li>
+</ul>
+    <h5>Custom overlay</h5>
+    <div>Some text here</div> -->
+    <nav class="right-align no-space"><button class="transparent link" data-ui="#treinoDiaglog">Cancel</button><button
+            class="transparent link" data-ui="#treinoDiaglog">Confirm</button></nav>
+</article>
+
+                </article>
+            </div>
+            <!-- Calculadora de Gasto Calórico -->
+            <div class="page padding " id="tab3">
+                <article class="secondary-container">
+
+                    <h6>Sequencia 1</h6>
+ 
+                    <ul class="list border">
+                        <li>
+                          <button class="circle">A</button>
+                          <div class="max">
+                            <h6 class="small">Treino 1</h6>
+                            <div>teste</div>
+                          </div>
+                          <label>15 rep</label>
+                        </li>
+                        <li>
+                          <button class="circle">A</button>
+                          <div class="max">
+                            <h6 class="small">Headline</h6>
+                            <div>Supporting text</div>
+                          </div>
+                          <label>+15 min</label>
+                        </li>
+                        <li>
+                            <button class="circle">15 rep</button>
+                            <div class="max">
+                              <h6 class="small">Headline</h6>
+                              <div>Supporting text</div>
+                            </div>
+                            <label>+15 min</label>
+                          </li>
+                          <li>
+                            <button class="circle">A</button>
+                            <div class="max">
+                              <h6 class="small">Headline</h6>
+                              <div>Supporting text</div>
+                            </div>
+                            <label>+15 min</label>
+                          </li>
+                          <li>
+                            <button class="circle">A</button>
+                            <div class="max">
+                              <h6 class="small">Headline</h6>
+                              <div>Supporting text</div>
+                            </div>
+                            <label>+15 min</label>
+                            <a data-ss1744242147="1">Link</a>
+                            <button>Button</button>
+                          </li>
+                          <li>
+                            <div class="max">
+                              <h6 class="small">Headline</h6>
+                              <div>Supporting text</div>
+                            </div>
+                            <a data-ss1744242147="1">Link</a>
+                            <button>Button</button>
+                          </li>
+                          <li>
+                            <div class="max">
+                              <h6 class="small">Headline</h6>
+                              <div>Supporting text</div>
+                            </div>
+                            <a data-ss1744242147="1">Link</a>
+                            <button>Button</button>
+                          </li>
+                      </ul>
+   
+                </article>
+            </div>
+            <!-- Quiz de Emoções -->
+            <div class="page padding" id="tab4">
+                <article class="secondary-container">
+
+                    <table border="1" cellpadding="5">
+                        <thead>
+                          <tr>
+                            <th>Sequência</th>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Sequência 1 -->
+                          <tr><td rowspan="10">Sequência 1</td><td>Rosca Direta</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Rosca Alternada</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Rosca Scott</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Rosca Inversa</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Peck Deck</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Supino Reto</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Supino Inclinado</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Desenvolvimento Ombro Anilha</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Elevação Lateral</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Elevação Frontal</td><td>3x</td><td>12</td></tr>
+                      
+                          <!-- Sequência 2 -->
+                          <tr><td rowspan="9">Sequência 2</td><td>Agachamento Smith</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Passadas</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Adução</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Leg Press</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Panturrilha no Leg</td><td>3x</td><td>20</td></tr>
+                          <tr><td>Panturrilha Banco</td><td>3x</td><td>20</td></tr>
+                          <tr><td>Extensora</td><td>3x</td><td>20</td></tr>
+                          <tr><td>Agachamento Sissy</td><td>4x</td><td>20</td></tr>
+                          <tr><td>Abd Infra</td><td>3x</td><td>20</td></tr>
+                      
+                          <!-- Sequência 3 -->
+                          <tr><td rowspan="9">Sequência 3</td><td>Pull Down</td><td>4x</td><td>12</td></tr>
+                          <tr><td>Remada Alta</td><td>4x</td><td>12</td></tr>
+                          <tr><td>Puxada Frente</td><td>4x</td><td>12</td></tr>
+                          <tr><td>Crucifixo Inverso</td><td>4x</td><td>12</td></tr>
+                          <tr><td>Remada Curvada</td><td>4x</td><td>12</td></tr>
+                          <tr><td>Tríceps Testa Banco</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Tríceps Corda</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Tríceps Francês</td><td>3x</td><td>12</td></tr>
+                          <tr><td>Tríceps Coice</td><td>3x</td><td>12</td></tr>
+                      
+                          <!-- Sequência 4 -->
+                          <tr><td rowspan="7">Sequência 4</td><td>Flexora</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Leg Pé Alto</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Sumô Smith</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Abdução</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Flexora Unilateral</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Stiff com Anilha</td><td>3x</td><td>15</td></tr>
+                          <tr><td>Abd Supra</td><td>3x</td><td>20</td></tr>
+                        </tbody>
+                      </table>
+                      
+ 
+                </article>
+            </div>
+            <!-- Lembre-se de beber água -->
+            <div class="page padding" id="tab5">
+                <article class="secondary-container">
+                    <style>
+                        table {
+                          border-collapse: collapse;
+                          width: 90%;
+                          margin-bottom: 20px;
+                          font-family: sans-serif;
+                        }
+                        caption {
+                          font-weight: bold;
+                          font-size: 1.2em;
+                          margin-bottom: 5px;
+                          text-align: left;
+                        }
+                        th, td {
+                          border: 1px solid #ddd;
+                          padding: 8px;
+                          text-align: left;
+                        }
+                        th {
+                          background-color: #f2f2f2;
+                          font-weight: bold;
+                        }
+                        tr:nth-child(even) {
+                          background-color: #f9f9f9;
+                        }
+                      </style>
+                      
+                      <table>
+                        <caption>Sequência - 1</caption>
+                        <thead>
+                          <tr>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Carga</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Rosca direta altern.</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Rosca alternada</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Rosca Scott Barra</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Rosca inversa</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>PECK DECK</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Supino Reto</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Supino inclinado</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Desenvol ombro anilha</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Elevação lateral</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Elevação frontal</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      <table>
+                        <caption>Sequência - 2</caption>
+                        <thead>
+                          <tr>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Carga</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Agachamento Smith</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Passadas</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Adução</td>
+                            <td>3x</td>
+                            <td>3 voltas</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Leg press</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Panturrilha Leg</td>
+                            <td>3x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Pantu milha Banco</td>
+                            <td>3x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Extensora</td>
+                            <td>4x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Agach. Búlgaro (ou similar)</td>
+                            <td>4x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Abd infra</td>
+                            <td>3x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      <table>
+                        <caption>Sequência - 3</caption>
+                        <thead>
+                          <tr>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Carga</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Pull Down</td>
+                            <td>4x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Remada alta</td>
+                            <td>4x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Puxada Frente</td>
+                            <td>4x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Crucifixo inverso</td>
+                            <td>4x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Remada Curvada</td>
+                            <td>4x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Triceps testa Banco</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Triceps Corda</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Triceps francês</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                           <tr>
+                            <td>Triceps Coice</td>
+                            <td>3x</td>
+                            <td>12</td>
+                            <td>A definir</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      <table>
+                        <caption>Sequência - 4</caption>
+                        <thead>
+                          <tr>
+                            <th>Exercício</th>
+                            <th>Séries</th>
+                            <th>Repetições</th>
+                            <th>Carga</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Flexora</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Leg pé alto</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Sumô Smith</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Abdutora</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Flexora Quadril</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                          <tr>
+                            <td>Sentad. + anilha</td>
+                            <td>3x</td>
+                            <td>15</td>
+                            <td>A definir</td>
+                          </tr>
+                           <tr>
+                            <td>Abd prancha</td>
+                            <td>3x</td>
+                            <td>20</td>
+                            <td>A definir</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </article>
+            </div>
+        </div>
+
+
+
+        <!-- Importando o módulo PRINCIPAL-->
+        <script type="module" src="../js/util/essencial.js"></script>
+        <script src="../js/pagina/fitness.js"></script>
+        <script src="../js/pagina/fitness_frase.js"></script>
+
+        <script  type="module" src="../js/pagina/trainer.js"></script>
+        <script type="module" src="../js/util/essencial.js"></script>
+    
+    
+
+    </main>
+
+
+
+<!-- FAB -->
+<div class="bottom fab-rodape extra" style="
+position: fixed;
+bottom: 16px;
+z-index: 101;
+right: 10px;
+">
+    <button class="extend circle tertiary" data-ui="#treinoDiaglog">
+        <i>add</i>
+        <span>Button</span>
+    </button>
+</div>
+
+<div class="overlay blur"></div>
+
+
+
+
+   <!-- TREINO DIALOG -->
+<dialog id="treinoDiaglog" >
+</dialog>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchBox = document.querySelector(".searchBox");
+  
+      // Seleciona todos os itens <li> do menu, exceto o primeiro (input interno)
+      document.querySelectorAll("menu.min li").forEach((li) => {
+        li.addEventListener("click", () => {
+          const selectedText = li.querySelector("div")?.innerText;
+          if (selectedText && searchBox) {
+            searchBox.value = selectedText;
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

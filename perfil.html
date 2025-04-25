@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Estética e Saúde Academia">
+    <meta property="og:description" content="Uma breve descrição do site que aparece ao compartilhar.">
+    <title>Meus dados: Estética e Saúde Academia</title>
+    <!-- css google -->
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/appcss">
+    
+
+    <style>
+     li.li-card-min {
+    box-shadow: var(--elevate1) !important;
+    background-color: var(--surface-container-low) !important;
+    color: var(--on-surface) !important;
+    padding: 1rem !important;
+    border-radius: .75rem !important;
+    transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3) !important; 
+}
+button.border.square.round.extra.active {
+    background: #3F51B5;
+}
+    </style>
+</head>
+<!-- <body class="light"> -->
+<body >
+
+<!--  antigo-->
+  
+<!-- injetar header -->
+<div class="max responsive laranja" id="headerDINAMICO"></div>
+<!-- injetar painel -->
+<div id="painel-dinamico"></div>
+<!--
+
+    <header class="max responsive laranja-primario">
+        <nav>
+       
+            <button data-ui="#painel" class="circle transparent">
+                <i>menu</i>
+            </button>
+            <h5 class="max">Meus dados</h5>
+           
+            <a href="../paginas/login.html">
+                <button class="circle transparent">
+                  <i>account_circle</i>
+                    <div class="tooltip bottom">Fazer Login</div>
+                </button>
+            </a>
+
+            <a href="../paginas/blog.html">
+                <button class="circle transparent">
+                    <i>newspaper</i>
+                    <div class="tooltip bottom">Blog</div>
+                </button>
+            </a>
+
+         
+            <button class="circle transparent">
+                <i>more_vert</i>
+            </button>
+        </nav>
+    </header>
+-->
+
+<!-- PAINEL -->
+    <dialog id="painel" class="left">
+        <nav class="drawer max">
+            <header>
+                <nav>
+                    <!-- logo ou img de perfil -->
+                    <img class="circle" src="../img/beer-and-woman.svg">
+                    <h6>Estética e Saúde Academia</h6>
+                </nav>
+            </header>
+            <a href="../paginas/login.html">
+                <i>inbox</i>
+                <span class="max">Login/Cadastro</span>
+            </a>
+            <a data-ui="#tab1">
+                <i>send</i>
+                <span>Calculadora de IMC</span>
+            </a>
+            <a data-ui="#tab2">
+                <i>favorite</i>
+                <span> Contador de água</span>
+            </a>
+            <a data-ui="#tab3">
+                <i>delete</i>
+                <span> Calculadora de Gasto Calórico </span>
+            </a>
+            <hr>
+            <label>opções</label>
+            <a data-ui="#tab4">
+                <i>fiber_manual_record</i>
+                <span>Lembre-se de beber água</span>
+            </a>
+        </nav>
+        <nav class="right-align">
+            <button class="border">Cancel</button>
+            <button>Confirm</button>
+        </nav>
+    </dialog>
+
+
+<!-- TAB IDS -->
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+    <main class="responsive black">
+
+ 
+        <div class="medium-space"></div>
+
+        <!--TAB VIEWR-->
+        <div>
+            <!-- Calculadora de IMC -->
+            <div class="page padding active" id="tab1">
+              <article class="secondary-container">
+
+
+
+                <nav class="vertical  center-align middle-align">
+                  <div class="btn_perfil">
+                    <button class="circle  extra" style="
+                                  block-size: 6.5rem;
+                                  min-inline-size: 6.5rem;
+                                  font-size: 15rem;
+                                  border-radius: 5.75rem;
+                              "><i id="set_icon">dashboard</i> </button>
+                            <button   data-ui="#perfil_dialog" class=" small  "
+                              style="position: absolute;width: 2rem!important;bottom: 0px;right: 0px;left: 4rem;block-size: 1.8rem;min-inline-size: 4.5rem;border-radius: 5.75rem;background-color: #CDDC39;"><i >edit</i>
+                              <span>editar</span></button>
+
+                  </div>
+                </nav>
+                <nav class="  center-align middle-align">
+                  <h4 id="set_nome">Nome</h4>
+                </nav>
+
+                <div class="grid  center-align middle-align">
+                  <div class="s12 m12 l6">
+                    <article>
+                    <h5>Altura</h5>
+                    <h6 id="set_altura">0cm</h6>
+                  </article>
+                  </div>
+                  <div class="s12 m12 l6">
+                    <article>
+                      <h5>Peso</h5>
+                      <h6 id="set_peso">0Kg</h6>
+                    </article>
+                  </div>
+                  <div class="s12 m12 l6">
+                    <article>
+                      <h5>Sequencias</h5>
+                      <h6 id="set_sequencia">0</h6>
+                    </article>
+                  </div>
+                  <div class="s12 m12 l6">
+                    <article>
+                      <h5>Treinos</h5>
+                      <h6 id="set_treino">0</h6>
+                    </article>
+                  </div>
+                </div>
+
+
+                <dialog id="perfil_dialog" >
+                  <legend>Escolha um Icone de Perfil</legend>
+<div class="list_img_perfil"></div>
+
+                
+                <div class="field label border">
+                  <input type="text" id="input_Nome">
+                  <label>Nome</label>
+                </div>
+                <div class="field label border">
+                  <input type="number" id="input_Altura">
+                  <label>Altura</label>
+                </div>
+                <div class="field label border">
+                  <input type="number" id="input_Peso">
+                  <label>Peso</label>
+                </div>
+                <nav class="responsive ">
+                  <button class="transparent link  " data-ui="#perfil_dialog">Cancelar</button>
+                  <button class="transparent link  " data-ui="#perfil_dialog" id="btn_salvar_perfil">Salvar</button>
+                </nav>
+              </dialog>
+
+                
+                  </nav>
+           
+            </article>
+ 
+        
+            </div>
+       
+      <!-- Importando o módulo PRINCIPAL-->
+      <script type="module" src="../js/util/essencial.js"></script>
+    
+
+      <script type="module" src="../js/pagina/perfil.js"></script>
+  
+
+    </main>
+
+
+</body>
+
+</html>

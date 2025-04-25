@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Treino de Academia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/style.css">
+</head>
+
+<body>
+
+    <h2>Ficha de Treino</h2>
+
+    <div id="training-sheet">
+        <div class="sequencia" data-sequencia="1">
+            <h3 class="sequencia-header">Sequência 1: Peito e Tríceps</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Peito</h4>
+                <div class="exercicios-grupo" data-grupo="peito">
+                    <div class="exercicio-row">
+                        <input type="text" value="Supino reto" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Supino inclinado" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Crucifixo" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="peito">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Tríceps</h4>
+                <div class="exercicios-grupo" data-grupo="triceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Tríceps testa" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Tríceps francês" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="triceps">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="2">
+            <h3 class="sequencia-header">Sequência 2: Costas e Bíceps</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Costas</h4>
+                <div class="exercicios-grupo" data-grupo="costas">
+                    <div class="exercicio-row">
+                        <input type="text" value="Remada curvada" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Puxada frente" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="costas">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Bíceps</h4>
+                <div class="exercicios-grupo" data-grupo="biceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Rosca direta" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Rosca scott" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="biceps">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="3">
+            <h3 class="sequencia-header">Sequência 3: Quadríceps e Panturrilha</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Quadríceps</h4>
+                <div class="exercicios-grupo" data-grupo="quadriceps">
+                    <div class="exercicio-row">
+                        <input type="text" value="Agachamento" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="10" placeholder="Repetições">
+                        <input type="text" value="90-120 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Afundo" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Leg press" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="quadriceps">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Panturrilha</h4>
+                <div class="exercicios-grupo" data-grupo="panturrilha">
+                    <div class="exercicio-row">
+                        <input type="text" value="Flexão plantar em pé" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <input type="text" value="45 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Flexão plantar sentado" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="panturrilha">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <div class="sequencia" data-sequencia="4">
+            <h3 class="sequencia-header">Sequência 4: Glúteo e Posterior</h3>
+            <div class="grupo">
+                <h4 class="grupo-header">Glúteo</h4>
+                <div class="exercicios-grupo" data-grupo="gluteo">
+                    <div class="exercicio-row">
+                        <input type="text" value="Levantamento terra" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="8" placeholder="Repetições">
+                        <input type="text" value="90-120 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Stiff" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="gluteo">Adicionar Exercício</button>
+            </div>
+            <div class="grupo">
+                <h4 class="grupo-header">Posterior</h4>
+                <div class="exercicios-grupo" data-grupo="posterior">
+                    <div class="exercicio-row">
+                        <input type="text" value="Ponte" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="15" placeholder="Repetições">
+                        <input type="text" value="45-60 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                    <div class="exercicio-row">
+                        <input type="text" value="Agachamento búlgaro" placeholder="Exercício">
+                        <input type="number" value="3" placeholder="Séries">
+                        <input type="number" value="12" placeholder="Repetições">
+                        <input type="text" value="60-90 seg" placeholder="Descanso">
+                        <button class="remove-button">Remover</button>
+                    </div>
+                </div>
+                <button class="add-button" data-grupo="posterior">Adicionar Exercício</button>
+            </div>
+        </div>
+
+        <button id="save-workout" class="save-button">Salvar Ficha</button>
+    </div>
+
+    <script src="../js/pagina/ficha.js"></script>
+    <script type="module" src="../js/util/essencial.js"></script>
+
+    </script>
+</body>
+
+</html>

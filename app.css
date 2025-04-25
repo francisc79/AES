@@ -1,0 +1,877 @@
+:root {
+    color-scheme: light dark;
+}
+body {
+    background-color: #000000 !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
+    }
+    .background {
+        background-color: #000000 !important;
+      
+    }
+ 
+
+/* CSS personalizado para o tema "Estética e Saúde Academia"
+  Utiliza as cores primárias:
+  - Laranja/Marrom: #CF8517
+  - Preto: black
+*/
+
+/* Variáveis CSS para facilitar a manutenção das cores */
+:root {
+    --cor-primaria: #CF8517; /* Nosso tom de laranja/marrom */
+    --cor-secundaria: black; /* A cor preta */
+    --cor-fundo-claro: #f0f0f0; /* Sugestão para fundos claros, se necessário */
+    --cor-texto-claro: #ffffff; /* Sugestão para texto sobre fundos escuros */
+  }
+
+button {
+    width: 30rem;
+}
+.button, button {
+    background-color: #CF8517 !important;
+    box-sizing: content-box;
+    display: inline-flex
+;
+    align-items: center;
+    justify-content: center;
+    block-size: 2.5rem;
+    min-inline-size: 2.5rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--on-primary);
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    margin: 0 .5rem;
+    border-radius: 1.25rem;
+    transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3);
+    -webkit-user-select: none;
+    user-select: none;
+    gap: 1rem;
+    line-height: normal;
+}
+
+
+/*class laranja com preto*/
+.laranja{
+    background-color: #F8A025;
+    color: #060605;
+    
+}
+
+.teste :hover{
+    background-color: #101010 !important;
+    color: #9bcf00 !important;
+}
+
+.login{
+    background-color: var(--darkreader-background-2196f3, #333030) !important;
+    border:0.15rem solid #F8A025;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #e6e3e333;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+.black {
+    background-color: #181A1B;
+    color: #ffffff;
+border-color: #F8A025;
+
+}
+main.surface-variant {
+    background-color: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+}
+
+/**blog**/
+main.background {
+    background-color: #000000 !important;
+    color: var(--on-background) !important;
+
+}
+/**cor das letras blog pag inicial*/
+main article p {
+  color: #ffffff !important;
+}
+ 
+    /** CSS para o Blog - Estética e Saúde Academia
+  Tema baseado nas cores:
+  - Laranja/Marrom: #CF8517 (variável --cor-primaria)
+  - Preto: black (variável --cor-secundaria)
+
+
+/* Variáveis CSS para facilitar a manutenção das cores */
+:root {
+    --cor-primaria: #f8a025; /* Nosso tom de laranja/marrom */
+    --cor-secundaria: black; /* A cor preta */
+    --cor-fundo-claro: #f0f0f0; /* Um fundo claro para contraste, fora das cores principais */
+    --cor-texto-claro: #ffffff; /* Cor para texto sobre fundos escuros */
+  }
+  
+  /* Estilo geral do body */
+
+  body {
+    background-color: var(--cor-secundaria); /* Fundo claro para a página */
+    color: var(--cor-texto-claro) !important; /* Cor padrão do texto como preto */
+    font-family: 'Big Shoulders', sans-serif; /* Mantém a fonte especificada */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para o cabeçalho (header) */
+  /* Usamos a cor primária para o fundo do cabeçalho */
+  header {
+    background-color: var(--cor-primaria); /* Fundo laranja/marrom */
+    color: var(--cor-texto-claro); /* Texto branco para contraste no cabeçalho */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar o cabeçalho */
+  }
+  
+  /* Estilo para a navegação dentro do cabeçalho */
+  header nav {
+    display: flex;
+    align-items: center;
+    /* A classe 'laranja' no header já deve definir a cor de fundo,
+       mas garantimos que a navegação herde ou utilize as cores corretas */
+  }
+  
+  /* Estilo para os botões no cabeçalho */
+  /* Botões transparentes no header terão a cor do texto/ícone definida pelo pai (header) */
+  header nav button.circle.transparent {
+      background-color: transparent; /* Fundo transparente */
+      color: var(--cor-texto-claro); /* Cor do ícone/texto branca (herdada do header) */
+      border: none; /* Remove borda */
+      /* Outras propriedades de layout e tamanho do botão podem vir de um framework ou base css */
+  }
+  
+  /* Estilo para a logo no cabeçalho */
+  header nav h5 img {
+    /* Ajuste o tamanho da logo conforme necessário */
+    height: 40px; /* Exemplo de altura */
+    margin-right: 15px;
+  }
+  
+  /* Estilo para os tooltips (dicas de hover) */
+  /* Usamos preto para o fundo do tooltip e texto branco */
+  .tooltip {
+    background-color: var(--cor-secundaria); /* Fundo preto */
+    color: var(--cor-texto-claro); /* Texto branco */
+    /* Outras propriedades de tooltip (posição, padding, etc.) */
+  }
+  
+  
+  /* Estilo para o conteúdo principal (main) */
+  /* O main pode ter um fundo preto para contrastar com o fundo claro do body */
+  main.responsive.black {
+    background-color: var(--cor-secundaria); /* Fundo preto para o main */
+    color: var(--cor-texto-claro); /* Texto branco para o conteúdo principal */
+    padding: 20px; /* Espaço interno */
+    border: 2px solid var(--cor-primaria); /* Borda laranja/marrom ao redor do main */
+    min-height: 80vh; /* Garante que o main tenha pelo menos 80% da altura da viewport */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+  }
+  /**container blog*/
+  :is(main,header,footer,section).responsive {
+    max-inline-size: 75rem;
+    margin: 1px auto !important;
+    border-radius: 5px !important;
+}
+  /* Estilo para o container do blog dentro do main */
+  /* O container pode ter um fundo claro para os posts dentro dele */
+  #blog-container {
+    width: 100%; /* Ocupa a largura total do main */
+    max-width: 800px; /* Limita a largura máxima para melhor leitura em telas grandes */
+    background-color: var(--cor-secundaria); /* Fundo claro para os posts do blog */
+    color: var(--cor-texto-claro) !important; /* Texto preto dentro do container */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra mais proeminente */
+  }
+  
+  /* Estilos genéricos para elementos dentro do blog-container (ajustar conforme a estrutura dos seus posts) */
+  /* Exemplo: Estilo para títulos de post */
+  #blog-container h2 {
+    color: var(--cor-primaria); /* Títulos de post na cor laranja/marrom */
+    margin-top: 0; /* Remove margem superior padrão */
+  }
+  
+  /* Exemplo: Estilo para parágrafos de post */
+  #blog-container p {
+    line-height: 1.6; /* Aumenta a altura da linha para melhor legibilidade */
+    margin-bottom: 15px; /* Espaço abaixo dos parágrafos */
+  }
+  
+  /* Exemplo: Estilo para links dentro dos posts */
+  #blog-container a {
+    letter-spacing: normal;
+    font-size: 24px !important;
+    font-family: Arial, sans-serif;
+    font-weight:400;
+    color: var(--cor-primaria); /* Links na cor laranja/marrom */
+    text-decoration: none; /* Remove sublinhado padrão */
+    border-bottom: 1px dashed var(--cor-primaria); /* Adiciona um sublinhado tracejado */
+  }
+  
+  /* Efeito hover para links nos posts */
+  #blog-container a:hover {
+    color:#FF8C00; /* Muda a cor para mais escuro ao passar o mouse */
+    border-bottom-color: var(--cor-secundaria); /* Muda a cor do sublinhado */
+  }
+  article.primary-container {
+    background-color: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+}
+  
+  /*
+    Adicione mais estilos aqui conforme a estrutura do conteúdo que será carregado dinamicamente
+    dentro de #blog-container para garantir que apenas preto e #CF8517 (e seus contrastes) sejam usados.
+    Por exemplo: imagens, blocos de código, citações, etc.
+  */
+
+
+/**Cor tabs*/
+.tabs>a.active, .tabs>a.active>i {
+    color: #ffffff !important;
+}
+.tabs>a.active:before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    block-size: .125rem;
+    background-color: #f4f4f4 !important;
+}
+.orange, .orange6 {
+    background-color: #2a2722 !important;
+}
+
+/* .s6 {
+    grid-area: auto / span 6;
+    background-color: #272727;
+    color: #ededed;
+} */
+
+  /* Estilo para a barra contador de agua */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    /* Adicionado para posicionamento absoluto do texto */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+}
+
+.progress-bar {
+    height: 40px;
+    background: linear-gradient(to right, #ffffff, #527ef7);
+    /* Gradiente de cor */
+    width: 0%;
+    position: absolute;
+    /* Adicionado para posicionamento do texto */
+    top: 0;
+    left: 0;
+}
+
+#progress-text {
+    position: relative;
+    z-index: 1;
+    color: #000000;
+    font-weight: bold;
+    line-height: 40px;
+    /* Alinha verticalmente o texto */
+}
+
+.progress-bar span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+
+/**css barra lateral*/
+dialog:is(.active,[open]):is(.left,.right,.top,.bottom,.max) {
+    transform: translate(0);
+    :is(nav,.row,dialog.max,header.fixed,footer.fixed,menu>a,menu.max,table,.tabs):not(.round) {
+        border-radius: 10PX !important;
+    }
+}
+
+.dialog.right, dialog.left {
+    border-radius: 0 1rem 1rem 0;
+    background-color: #1e1b1b !important;
+    transform: translate(-100%);
+}
+
+
+
+/* card/article dark */
+.bg-dark {
+    background-color: #212121 !important;
+    border: 0.1rem solid #f8a025;
+}
+
+.borda{
+
+    border: 0.1rem solid #f8a025;
+}
+
+.card-post {
+    background-color:#000000 ;
+
+}
+article.card-post {
+  color: #ffffff !important;
+  border: 1px solid #ee9219 !important;
+  margin-top: 100px !important;
+  background-color: #212121 !important;
+}
+/* Estilo para o painel lateral (dialog) */
+  /* Estilo para os links no painel lateral */
+nav.drawer {
+ 
+    flex-direction: column;
+    align-items: normal;
+    inline-size: 20rem;
+    gap: 0;
+    padding: 0.5rem 0rem !important;
+}
+  dialog#painel nav.drawer a {
+    color: var(--cor-texto-claro); /* Cor dos links no painel (branco) */
+    text-decoration: none; /* Remove sublinhado dos links */
+    padding: 10px 15px; /* Adiciona padding interno */
+    display: flex; /* Usa flexbox para alinhar ícone e texto */
+    align-items: center; /* Centraliza verticalmente */
+  }
+    /* Estilo para os links no painel lateral ao selecionar */
+  nav.drawer > a:is(:hover, .active), nav.drawer > :is(ol, ul) > li > a:is(:hover, .active){
+    background-color: #FFA300 !important; }
+  
+  /* Estilo para os links no painel lateral ao passar o mouse */
+  dialog#painel nav.drawer a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Um leve destaque ao passar o mouse */
+  }
+
+/**Estilo para a navegação inferior (tabs) */
+nav.bottom.orange {
+    background-color: var(--cor-primaria); /* Fundo da barra de tabs com a cor laranja/marrom */
+  }
+  
+  /* Estilo para os links (tabs) na navegação inferior */
+  nav.bottom .tabs a {
+    color: var(--cor-texto-claro); /* Cor dos ícones e texto nas tabs (branco) */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 10px 15px; /* Padding interno */
+  }
+  
+  /* Estilo para a tab ativa na navegação inferior */
+  nav.bottom .tabs a.active {
+    background-color: rgba(0, 0, 0, 0.2); /* Um fundo levemente escuro para a tab ativa */
+    border-bottom: 2px solid var(--cor-secundaria); /* Borda inferior preta para destacar a tab ativa */
+  }
+
+/**Estilo para o card da frase do dia */
+.frase-card {
+  border-radius: 10px;
+    border: 2px solid var(--cor-primaria); /* Borda com a cor laranja/marrom */
+  }
+  
+  /* Estilo para títulos h2 dentro dos artigos */
+  main article h2 {
+    color: var(--cor-primaria); /* Cor dos títulos h2 com a cor laranja/marrom */
+  }
+  
+  /* Estilo para parágrafos dentro dos artigos */
+  main article p {
+    color: #e2e2e2 !important; /* Cor de texto um pouco mais escura para melhor legibilidade */
+  }
+
+  main article p :hover
+  {color:#f8a025 !important;}
+
+
+/** Estilo para botões de ação (calcular, adicionar, agendar) */
+button.botao-calcular,
+button.botao-resultado {
+  /* Layout */
+  display: inline-flex; /* Usa flexbox para alinhar conteúdo (ícone/texto) */
+  align-items: center; /* Alinha itens verticalmente no centro */
+  justify-content: center; /* Alinha itens horizontalmente no centro */
+  gap: 1rem; /* Espaço entre os itens (ícone e texto) */
+
+  /* Box Model */
+  block-size: 2.5rem; /* Altura do botão */
+  min-inline-size: 2.5rem; /* Largura mínima do botão */
+  padding: 0 1.5rem; /* Padding horizontal (espaço interno nas laterais) */
+  box-sizing: content-box; /* Define como o padding e a borda afetam o tamanho */
+  margin: 0 .5rem; /* Margem ao redor do botão (espaço externo) */
+  margin-top: 10px; /* Espaço acima do botão (pode ser ajustado se a margem geral já for suficiente) */
+
+
+  /* Typography */
+  font-size: .875rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  line-height: normal; /* Altura da linha do texto */
+  color: var(--cor-texto-claro); /* Cor do texto nos botões (branco), usando a variável */
+
+  /* Visual */
+  background-color: #CF8517 !important; /* Cor de fundo com alta prioridade */
+  border-radius: 1.25rem; /* Bordas arredondadas */
+  transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3); /* Adiciona transição para efeitos visuais */
+
+  /* Interactivity */
+  cursor: pointer; /* Indica que é clicável ao passar o mouse */
+  -webkit-user-select: none; /* Impede a seleção de texto */
+  user-select: none; /* Impede a seleção de texto */
+}
+
+/* Efeito hover nos botões de ação */
+button.botao-calcular:hover,
+button.botao-resultado:hover {
+  background-color: #e09527; /* Um tom um pouco mais claro ao passar o mouse */
+}
+
+/** Estilo para os cards de post (dentro das abas) */
+article.card-post {
+  border: 1px solid #eee; /* Borda leve para separar o card */
+  margin-top: 20px; /* Espaço acima do card */
+  background-color: #f9f9f9; /* Fundo levemente diferente */
+}
+
+
+/** Estilo para o botão "Veja agora" nos cards de post */
+article.card-post button.border.round {
+    border-color: var(--cor-primaria); /* Borda do botão com a cor laranja/marrom */
+    color: var(--cor-texto-claro); /* Cor do texto do botão */
+    background-color: transparent; /* Fundo transparente */
+  }
+  
+  /* Efeito hover no botão "Veja agora" */
+  article.card-post button.border.round:hover {
+    background-color: var(--cor-primaria); /* Fundo com a cor laranja/marrom */
+    color: var(--cor-texto-claro); /* Cor do texto branco */
+  }
+
+/**CSS quiz */
+/* Estilo para os emojis no quiz */
+.emoji.extra {
+    cursor: pointer; /* Indica que são clicáveis */
+    margin: 5px; /* Espaço entre os emojis */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
+  }
+  
+  /* Efeito hover nos emojis */
+  .emoji.extra:hover {
+    transform: scale(1.1); /* Aumenta um pouco o tamanho ao passar o mouse */
+  }
+  
+  /* Estilo para o resultado do quiz */
+  #result {
+    margin-top: 20px; /* Espaço acima do resultado */
+    text-align: center; /* Centraliza o texto */
+    color: var(--cor-primaria) !important; /* Cor do texto do resultado com a cor laranja/marrom */
+  }
+
+
+/**css letras frases*/ 
+p {
+  text-align: center;
+  margin: .5rem 0;
+  color: #ffffff !important;
+}
+
+
+/**CSS COMPARTILHAR*/
+        /* compartilhar */
+        .share-buttons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0px;
+          margin-bottom: 20px;
+      }
+
+      .share-button {
+          align-items: center;
+          width: auto;
+          gap: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          background-color: rgb(7, 7, 7) !important;
+          font-size: 14px;
+          text-decoration: none;
+          transition: background-color 0.3s, color 0.3s;
+      }
+
+      .share-button img {
+          vertical-align: middle;
+      }
+
+      .share-button.whatsapp {
+          border: 1px solid #29a71a;
+          /* Cor da logo do WhatsApp */
+          border-radius: 20px;
+          background: none;
+          color: #29a71a;
+      }
+
+      .share-button.whatsapp:hover {
+         border: 1px solid #29a71a;
+          background-color: #29a71a !important;
+          color: white;
+      }
+
+      .share-button.facebook {
+          border: 1px solid #1877F2;
+          /* Cor da logo do Facebook */
+          color: #1877F2;
+          border-radius: 20px;
+          background: none;
+      }
+
+      .share-button.facebook:hover {
+          background-color: #1877F2 !important;
+          color: white;
+      }
+
+      .share-button.email {
+          border: 1px solid #ff2147;
+          /* Cor cinza */
+          color: #ff2147;
+          border-radius: 20px;
+          background: none;
+      }
+
+      .share-button.email:hover {
+          background-color: #ff2147 !important;
+          color: white !important;
+      }
+      .share-button.twitter {
+          border: 1px solid #636363;
+          /* Cor da logo do Twitter */
+          color: #ffffff;
+          border-radius: 20px;
+          background: none;
+      }
+
+      .share-button.twitter:hover {
+          background-color: #000000;
+          border: 1px solid #000000;
+          /* Cor da logo do Twitter */
+          color: white;
+      }
+
+
+    
+      .header, footer {
+        
+        width: 100%;
+        background: rgba(0, 0, 0, 0.158) !important;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        min-block-size: 4rem;
+        padding: 0 0rem !important;
+       
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .sobre {   color: #eee;
+      background-color: #191818 !important;
+      padding: 15px !;
+
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color:  #CF8517 ;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 6px;
+    font-family: 'Big Shoulders', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.social-icons {
+  display: flex
+;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.report-error a {
+  display: flex;
+  color: #c5c5c5;
+  text-decoration: none;
+  gap: 4px;
+}
+/* TRAINER QUE ESTOU FAZENDO */
+
+.laranja-primario{
+    background-color: #f8a025 !important;
+    color: #191919 !important;
+ }
+ 
+ .bg-dark{
+     background-color: #212121 !important;
+ }
+ 
+ 
+ .borda{
+     border: .0625rem solid #f8a025 !important;
+ 
+ }
+ 
+ 
+ 
+ 
+ /* trainer */
+ .tas {
+     display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+ }
+ /**CSS IMC*/
+ #resultadoIMC {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0;
+  /* Bordas arredondadas */
+  text-align: center;
+  width: 180px;
+  margin: 10px auto;
+  /* Centraliza horizontalmente */
+}
+
+.abaixo-do-peso {
+  border-bottom: 3px solid #dc3545;
+  width: 180px;
+}
+
+.peso-normal {
+  border-bottom: 3px solid #28a745;
+  width: 180px;
+}
+
+.sobrepeso {
+  border-bottom: 3px solid #ffc107;
+  width: 180px;
+}
+
+.obesidade {
+  border-bottom: 3px solid #dc3545;
+  width: 180px;
+}
+
+.info-icon.abaixo-do-peso {
+  background-color: #dc3545;
+  color: white;
+}
+
+.info-icon.peso-normal {
+  background-color: #28a745;
+  color: white;
+}
+
+.info-icon.sobrepeso {
+  background-color: #ffc107;
+  color: black;
+}
+
+.info-icon.obesidade {
+  background-color: #dc3545;
+  color: white;
+}
+
+.info-icon {
+  /* botao botão */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #6E6E6E;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.info-text {
+  display: none;
+  background-color: #000000;
+  color: #6d6d6d;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: 130px;
+  z-index: 3;
+  width: 200px;
+  font-size: 16px;
+  text-align: left;
+  font-style: italic;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+}
+
+.botao-resultado, .botao-calcular, .botao-quiz {
+  width: 60%;
+}
+
+label { 
+  color: #868686;
+}
+
+.meta-container label {
+  margin: 0;
+  color: #999;
+}
+
+.meta-container input {
+  flex: 1;
+}
+.result {
+  font-size: 18px;
+}
+.quiz-p {
+  margin-bottom: 30px;
+}
+#question1, #question2 {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #f8a025;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 0 20px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #f8a025;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #ff7b00;
+  outline: none;
+}
+
+input::placeholder {
+  color: #e4e4e4;
+  font-style: italic;
+}
+
+.report-error {
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.report-error a {
+  display: inline-block;
+  color: #c5c5c5;
+  text-decoration: none;
+  gap: 5px;
+  /* Espaçamento entre o ícone e o texto */
+}
+
+.report-error a:hover {
+  color: #8a8a8a;
+}
+
+.report-error img {
+  vertical-align: middle;
+}
+
+
+.field > select > option {
+  color: #000000 !important;
+  background-color: #af8036 !important;
+}
+
+
+footer {
+  background-color: #000000 !important; /* Cor de fundo para o rodapé */
+  color: #333; /* Cor do texto */
+  padding: 10px 0; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+}footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #ffffff; /* Cor do texto */
+  padding: 10px 0; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
+  z-index: 10; /* Garante que o rodapé fique acima de outros elementos, se necessário */
+}
+
+
+.field.label>label {
+  color: rgb(255, 255, 255) !important;
+  position: absolute;
+  inset: -.5rem auto auto 1rem;
+  display: flex
+;
+  inline-size: calc(100% - 5rem);
+  block-size: 4rem;
+  line-height: 4rem;
+  font-size: 1rem;
+  transition: all .2s;
+  gap: .25rem;
+  white-space: nowrap;
+}
+
+.field>:is(input,textarea,select) {
+  color: var(--cor-fundo-claro) !important;
+  all: unset;
+  position: relative;
+  display: flex
+;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: inherit;
+  border: .0625rem solid transparent;
+  padding: 0 .9375rem;
+  font-family: inherit;
+  font-size: 1rem;
+  inline-size: 100%;
+  block-size: 100%;
+  outline: none;
+  z-index: 1;
+  background: none;
+  resize: none;
+  text-align: start;
+  cursor: text;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BLOG - Estética e Saúde Academia">
+    <meta property="og:description" content="Saúde, beleza e performance em um só lugar!">
+    <meta property="og:image" content="https://i.imgur.com/ln8inqr.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://tomdrd.github.io/V3">
+    <meta property="og:type" content="website">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="..//img/icon-192.png">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <!-- IMPORTANTE ESTUDAR SOBRE ISSO isso so depois --> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <title>Login-Estética e Saúde Academia</title>
+
+  <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+<link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+<!-- <link rel="stylesheet" href="../css/style.css"> -->
+</head>
+
+<body class="light">
+
+
+  <header class="max responsive laranja">
+   
+    <nav>
+        <!-- aqui vai ser outro botao de login ou mais coisa para depois -->
+        <!-- login no caso vai abrir uma pagina separada so para ela -->
+        <a href="../paginas/fitness.html">
+      </a> <img src="../img/logo.png" alt="">
+        <h5 class="max"></h5>
+
+
+    </nav>
+</header>
+
+  <!-- <nav class="bottom secondary">
+    <a>
+      <i>home</i>
+      <div>Home</div>
+    </a>
+    <a>
+      <i>search</i>
+      <div>Search</div>
+    </a>
+    <a>
+      <i>share</i>
+      <div>share</div>
+    </a>
+  </nav> -->
+
+  <main class="responsive  surface-variant">
+
+    <div class="padding center-align middle-align ">
+      <TELA_LOGIN>
+        <article class="login-card login">
+          
+            <!-- Seção de Autenticação -->
+    
+            <h2>Login</h2>
+            <div class="field label black large border">
+              <input type="email" id="login-email">
+              <label>Email</label>
+            </div>
+    
+            <div class="field label black large border">
+              <input type="password" id="login-password">
+              <label>Senha</label>
+            </div>
+    
+    
+    
+            <button id="btn-login">Entrar</button>
+            <p>Ainda não tem conta? <a href="#" id="mostrarCadastro">Cadastre-se</a></p>
+            <!-- RECUPERAR SENHA FALTA CRIAR O PAINEL A LOGICA ESTA PRONTA -->
+            <div class="te" style="display: none;">
+              <p>Esqueceu a senha? <a href="#" id="recuperarSenha">Recuperar Senha</a></p>
+            </div>
+    
+        </article>
+        <!-- Seção de Cadastro (inicialmente oculta) -->
+        <article class="cadastro-card login ">
+          <h2>Cadastro</h2>
+          <div class="field label black large border">
+            <input type="email" id="signup-email">
+            <label>Email</label>
+          </div>
+          <div class="field label black large border">
+            <input type="password" id="signup-password">
+            <label>Senha</label>
+          </div>
+    
+    
+          <button id="btn-cadastrar">Cadastrar</button>
+          <p>Já tem conta? <a href="#" id="mostrarLogin">Login</a></p>
+        </article>
+        </TELA_LOGIN>
+    </div>
+
+    <div class="large-space"></div>
+    <div class="large-space"></div>
+
+
+
+    <div class="large-space"></div>
+
+
+            <!-- COMPARTILHAR-->
+       
+    <!-- Rodapé -->
+    <footer>
+      <div class="share-buttons">
+        <p>Compartilhe:</p>
+        <button class="share-button whatsapp" onclick="shareWhatsApp()">
+            <img src="..//img/whatsapp.png" alt="WhatsApp" width="20" height="20">
+        </button>
+        <button class="share-button facebook" onclick="shareFacebook()">
+            <img src="..//img/facebook.png" alt="Facebook" width="20" height="20">
+        </button>
+        <button class="share-button email" onclick="shareEmail()">
+            <img src="..//img/email.png" alt="Email" width="20" height="20">
+        </button>
+        <button class="share-button twitter" onclick="shareTwitter()">
+            <img src="..//img/twitter.png" alt="Twitter" width="20" height="20">
+        </button>
+    </div>
+
+      <div class="sobre">
+          <h2>Redes Sociais</h2>
+          <div class="social-icons">
+              <a href="https://wa.me/qr/4KCWWIXJLLUVF1" target="_blank">
+                  <img src="..//img/whatsapp.png" alt="Whatsapp" width="20" height="20"> Whatsapp
+              </a>
+              <a href="https://www.instagram.com/academia2023estetica_e_saude/?igsh=MWtpMzNiNnAxeDRsbA%3D%3D#"
+                  target="_blank">
+                  <img src="..//img/instagram.png" alt="Instagram" width="20" height="20"> Instagram
+              </a>
+          </div>
+          <div class="linha">
+          </div>
+          <div class="report-error">
+              <a href="mailto:antonyeltonrodrigues@gmail.com">
+                  <img src="..//img/error.png" alt="Instagram" width="14" height="14"> Reportar erro nesta página
+              </a>
+          </div>
+  </footer>
+  </div>
+    <!-- Importando o módulo PRINCIPAL-->
+  
+  </main>
+  <script type="module" src="../js/util/essencial.js"></script>
+  <script type="module" src="../js/pagina/login.js"></script>
+  
+  <script>
+    
+///function: compartilhar
+// Seu código JavaScript com as funções shareWhatsApp, shareFacebook, etc.
+function shareWhatsApp() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Confira este site incrível!");
+  window.open(`https://api.whatsapp.com/send?text=${text} ${url}`, "_blank");
+}
+
+function shareFacebook() {
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank");
+}
+
+function shareEmail() {
+  const subject = encodeURIComponent("Confira este site incrível!");
+  const body = encodeURIComponent(
+      `Dê uma olhada neste site: ${window.location.href}`
+  );
+  window.open(`mailto:?subject=${subject}&body=${body}`, "_blank");
+}
+
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Confira este site incrível!");
+  window.open(
+      `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
+      "_blank"
+  );
+}
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Perfil</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            /* Preto para o fundo do body */
+            margin: 0;
+            color: #ffa500;
+            /* Laranja para a cor do texto padrão no body */
+        }
+
+        .container {
+            background-color: #333;
+            /* Um tom mais escuro de preto para o container */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            /* Sombra mais escura para melhor contraste */
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffa500;
+            /* Laranja para o título */
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ddd;
+            /* Um tom de cinza claro para a label */
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            /* Borda em um tom de cinza mais escuro */
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #444;
+            /* Fundo dos inputs em um tom de cinza escuro */
+            color: #fff;
+            /* Texto dos inputs em branco */
+        }
+
+        button {
+            background-color: #ffa500;
+            /* Laranja para o botão */
+            color: #000;
+            /* Preto para o texto do botão */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #ff8c00;
+            /* Um tom de laranja mais escuro para o hover */
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        #login-message,
+        #save-message {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #00ff22;
+            /* Laranja para as mensagens */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="login-area">
+            <h2>Login</h2>
+            <label for="username-login">Nome de Usuário:</label>
+            <input type="text" id="username-login" placeholder="Digite seu nome">
+            <button id="login-button">Entrar</button>
+            <p id="login-message" class="hidden"></p>
+        </div>
+
+        <div id="profile-config" class="hidden">
+            <h2>Configuração do Perfil</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" placeholder="Seu nome">
+
+            <label for="age">Idade:</label>
+            <input type="number" id="age" placeholder="Sua idade">
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" step="0.1" id="weight" placeholder="Seu peso">
+
+            <label for="height">Altura (cm):</label>
+            <input type="number" id="height" placeholder="Sua altura">
+
+            <button id="save-button">Salvar</button>
+            <p id="save-message" class="hidden"></p>
+        </div>
+
+        <div id="welcome-area" class="hidden">
+            <h2>Bem-vindo(a), <span id="welcome-name"></span>!</h2>
+            <button id="logout-button">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginArea = document.getElementById('login-area');
+            const profileConfig = document.getElementById('profile-config');
+            const welcomeArea = document.getElementById('welcome-area');
+            const loginButton = document.getElementById('login-button');
+            const saveButton = document.getElementById('save-button');
+            const logoutButton = document.getElementById('logout-button');
+            const loginMessage = document.getElementById('login-message');
+            const saveMessage = document.getElementById('save-message');
+            const welcomeName = document.getElementById('welcome-name');
+            const usernameLoginInput = document.getElementById('username-login');
+            const nameInput = document.getElementById('name');
+            const ageInput = document.getElementById('age');
+            const weightInput = document.getElementById('weight');
+            const heightInput = document.getElementById('height');
+
+            function saveProfileData(name, age, weight, height) {
+                localStorage.setItem('userName', name);
+                localStorage.setItem('userAge', age);
+                localStorage.setItem('userWeight', weight);
+                localStorage.setItem('userHeight', height);
+                saveMessage.textContent = 'Perfil salvo com sucesso!';
+                saveMessage.classList.remove('hidden');
+                setTimeout(() => {
+                    saveMessage.classList.add('hidden');
+                }, 2000);
+            }
+
+            function loadProfileData() {
+                const name = localStorage.getItem('userName');
+                const age = localStorage.getItem('userAge');
+                const weight = localStorage.getItem('userWeight');
+                const height = localStorage.getItem('userHeight');
+
+                if (name) {
+                    nameInput.value = name;
+                    ageInput.value = age || '';
+                    weightInput.value = weight || '';
+                    heightInput.value = height || '';
+                }
+            }
+
+            function showWelcomeArea(username) {
+                welcomeName.textContent = username;
+                loginArea.classList.add('hidden');
+                profileConfig.classList.remove('hidden');
+                welcomeArea.classList.remove('hidden');
+                loadProfileData();
+            }
+
+            loginButton.addEventListener('click', () => {
+                const username = usernameLoginInput.value.trim();
+                if (username) {
+                    showWelcomeArea(username);
+                } else {
+                    loginMessage.textContent = 'Por favor, digite um nome de usuário.';
+                    loginMessage.classList.remove('hidden');
+                    setTimeout(() => {
+                        loginMessage.classList.add('hidden');
+                    }, 3000);
+                }
+            });
+
+            saveButton.addEventListener('click', () => {
+                const name = nameInput.value.trim();
+                const age = ageInput.value.trim();
+                const weight = weightInput.value.trim();
+                const height = heightInput.value.trim();
+
+                if (name) {
+                    saveProfileData(name, age, weight, height);
+                } else {
+                    saveMessage.textContent = 'O nome é obrigatório para salvar o perfil.';
+                    saveMessage.classList.remove('hidden');
+                    setTimeout(() => {
+                        saveMessage.classList.add('hidden');
+                    }, 3000);
+                }
+            });
+
+            logoutButton.addEventListener('click', () => {
+                loginArea.classList.remove('hidden');
+                profileConfig.classList.add('hidden');
+                welcomeArea.classList.add('hidden');
+                usernameLoginInput.value = '';
+            });
+
+            profileConfig.classList.add('hidden');
+            welcomeArea.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+/**CSS ficha de treino*/
+body {
+    font-family: sans-serif;
+    background-color: #111;
+    color: #eee;
+    margin: 10px; /* Reduzindo a margem padrão */
+}
+
+h2 {
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 20px; /* Reduzindo a margem inferior */
+}
+
+#training-sheet > div {
+    margin-bottom: 20px; /* Reduzindo a margem inferior */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #222;
+}
+
+.sequencia-header {
+    background-color: #333;
+    color: #ff8c00;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.grupo-header {
+    background-color: #444;
+    color: #ddd;
+    padding: 8px;
+    font-style: italic;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+.exercicios-grupo {
+    margin-bottom: 10px;
+}
+
+.exercicio-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) 50px; /* Layout responsivo das colunas */
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.exercicio-row input[type="text"],
+.exercicio-row input[type="number"] {
+    background-color: #555;
+    color: #eee;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%; /* Input ocupa a largura da célula */
+}
+
+.remove-button {
+    background-color: #c81818;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em; /* Reduzindo o tamanho da fonte em telas menores */
+}
+
+.add-button {
+    background-color: #ff8c00;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    font-size: 0.9em; /* Reduzindo o tamanho da fonte em telas menores */
+}
+
+.save-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em; /* Reduzindo o tamanho da fonte em telas menores */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Largura um pouco menor em telas menores */
+    max-width: 300px; /* Largura máxima para telas maiores */
+}
+
+.save-button:hover {
+    background-color: #388e3c;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 600px) {
+    .exercicio-row {
+        grid-template-columns: 1fr 1fr 50px; /* Reduzindo colunas em telas menores */
+    }
+    .exercicio-row input[type="text"]:nth-child(2), /* Ocultando o campo 'Séries' */
+    .exercicio-row input[type="number"]:nth-child(2),
+    .exercicio-row input[type="text"]:nth-child(4), /* Ocultando o campo 'Descanso' */
+    .exercicio-row input[type="number"]:nth-child(3) { /* 'Repetições' passa para a segunda posição */
+        order: 3; /* Move para baixo */
+        grid-column: 1 / span 2; /* Ocupa duas colunas */
+    }
+    .exercicio-row label:nth-child(2), /* Ocultando labels se você as tivesse */
+    .exercicio-row label:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .exercicio-row {
+        grid-template-columns: 1fr 50px; /* Ainda menos colunas */
+    }
+    .exercicio-row input[type="text"]:nth-child(2),
+    .exercicio-row input[type="number"]:nth-child(2) {
+        order: 2;
+        grid-column: 1 / span 1;
+    }
+}
+
+
+/**css perfil/
+

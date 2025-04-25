@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="BLOG - Estética e Saúde Academia">
+        <meta property="og:description" content="Saúde, beleza e performance em um só lugar!">
+        <meta property="og:image" content="https://i.imgur.com/ln8inqr.jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://tomdrd.github.io/V3">
+        <meta property="og:type" content="website">
+        <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="..//img/icon-192.png">
+        <!-- <link rel="manifest" href="manifest.json">IMPORTANTE ESTUDAR SOBRE ISSO  -->
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+        <title>Estética e Saúde Academia</title>
+
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+</head>
+
+
+
+
+
+
+
+<!-- <body class="light"> -->
+
+<body class="light">
+
+    <!-- header -->
+<!-- injetar header -->
+    <div class="max responsive laranja" id="headerDINAMICO"></div>
+
+     <!-- original
+    <header class="max responsive laranja">
+        <nav>
+           
+          
+            <button data-ui="#painel" class="circle transparent">
+                <i>menu</i>
+            </button>
+            <h5 class="max responsive">
+              
+                <img src="../img/logo.png" alt="Logo">
+            </h5>
+          
+            <a href="../paginas/perfil.html">
+                <button class="circle black">
+                    <i>account_circle</i>
+                    <div class="tooltip bottom">Perfil</div>
+                </button>
+            </a>
+            <a href="../paginas/trainer.html">
+                <button class="circle black">
+                    <i>dashboard</i>
+                    <div class="tooltip bottom">Ficha de Treino</div>
+                </button>
+            </a>
+            <a href="../paginas/blog.html">
+                <button class="circle black">
+                    <i>newspaper</i>
+                    <div class="tooltip bottom">Blog</div>
+                </button>
+            </a>
+            <a href="../paginas/FichadeTreino.html">
+                <button class="circle black">
+                    <i>fitness_center</i>
+                    <div class="tooltip bottom">ficha</div>
+                </button>
+            </a>
+        </nav>
+    </header>
+-->
+
+    <!-- PAINEL -->
+     <!-- dina,ico -->
+      
+     <div id="painel-dinamico"></div>
+
+
+    <!-- <dialog id="painel" class="left">
+        <nav class="drawer min black">
+            <header>
+                <nav>
+                   
+                    <img class="circle extra" src="..//img/imagem.jpg">
+                    <h6>Estética e Saúde Academia</h6>
+                </nav>
+            </header>
+            <nav class="vertical  center-align middle-align">
+            <h4 class="set_nome">nome</h4>
+        </nav>
+
+            <a href="../paginas/perfil.html">
+                <i>account_circle</i>
+                <span class="max">Perfil</span>
+            </a>
+          
+            <a href="../paginas/login.html">
+                <i>account_circle</i>
+                <span class="max">Login/Cadastro</span>
+            </a>
+            <label>App</label>
+            <a data-ui="#tab1">
+                <i>conditions</i>
+                <span>Calculadora de IMC</span>
+            </a>
+            <a data-ui="#tab2">
+                <i>water_drop</i>
+                <span> Contador de água</span>
+            </a>
+            <a data-ui="#tab3">
+                <i>monitor_heart</i>
+                <span> Calculadora de Gasto Calórico </span>
+            </a>
+            <a data-ui="#tab5">
+                <i>water_loss</i>
+                <span>Lembre-se de beber água</span>
+            </a>
+            <hr>
+            <label>Usuario</label>
+            
+            
+            <a href="../paginas/trainer.html">
+                <i>fitness_center</i>
+                <span class="max">Abrir Ficha de Treino</span>
+            </a>
+
+
+            <a href="../paginas/tabelaTreino.html">
+                <i>fitness_center</i>
+                <span class="max">Abrir Tabela de Treino</span>
+            </a>
+        </nav>
+        </nav>
+        <nav class="right-align">
+
+
+
+    </dialog> -->
+
+
+    <!-- TAB IDS -->
+    <nav class="bottom orange ">
+        <div class="tabs responsive ">
+            <!-- TABS ICNONES tuod dentro i é icone -->
+            <a class="active" data-ui="#tab1" tabindex="0"><i class="extra">conditions</i><span>Imc</span></a>
+            <a data-ui="#tab2" tabindex="0" class=""><i class="extra">water_drop</i><span>Contador de água<span></a>
+            <a data-ui="#tab3" tabindex="0" class=""><i class="extra">monitor_heart</i><span>Calculadora de Gasto
+                    Calórico</span></a>
+            <a data-ui="#tab4" tabindex="0" class=""><i class="extra">quiz</i><span>Quiz de Emoções</span></a>
+            <a data-ui="#tab5" tabindex="0" class=""><i class="extra">notifications_active</i><span>Lembre-se de beber
+                    água</span></a>
+        </div>
+    </nav>
+
+    <main class="responsive background">
+
+
+        <!-- Frase do Dia -->
+        <div class="frase-card box borda">
+            <h2>Frase do dia</h2>
+            <p id="frase"></p>
+        </div>
+        </TELA_FRASE>
+        </article>
+        <div class="medium-space"></div>
+
+        <!--TAB VIEWR-->
+        <div>
+            <!-- Calculadora de IMC -->
+            <div class="page padding active" id="tab1">
+                <article class="bg-dark">
+                    <h2>Calculadora de IMC</h2>
+                    <p> Saiba como está o seu indice de massa corporal:</p>
+                    <div class="input-imc">
+                        <div class="field label large border">
+                            <input type="number" id="peso">
+                            <label>Peso (kg)</label>
+                        </div>
+                        <div class="field label  large border">
+                            <input type="number" id="altura">
+                            <label>Altura (cm)</label>
+                        </div>
+                    </div>
+                    <br>
+
+                    <button class="botao-calcular" onclick="calcularIMC()">Calcular</button>
+                    <p id="resultadoIMC"></p>
+                    <article class="no-padding  card-post">
+                        <div class="grid no-space">
+                            <div class="s6">
+                                <img class="responsive medium" src="../img/post1.jpg">
+                            </div>
+                            <div class="s6">
+                                <div class="padding">
+                                    <!-- <h5>Title</h5> -->
+                                    <span>Quais as limitações no IMC?</span>
+                                    <nav>
+                                        <a href="../paginas/post.html?slug=entendendo-o-imc">
+                                            <button class="responsive border round">
+                                                Veja agora
+                                            </button>
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </article>
+            </div>
+            <!-- Contador de água -->
+            <div class="page padding" id="tab2">
+                <article class="bg-dark">
+                    <h2>Contador de água</h2>
+                    <p>Mantenha-se sempre bem hidratado.</p>
+                    <div class="meta-container">
+                        <div class="field label large border">
+                            <input type="text" id="meta-agua" value="2000ml" onfocus="removerMl()"
+                                onblur="adicionarMl()" oninput="validarNumero()">
+                            <label>Meta diária (ml):</label>
+                        </div>
+                    </div>
+                    <p style="display: none;">Consumido: <span id="agua-total">0</span>ml</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                        <span id="progress-text">Consumido: <span id="agua-total">0</span>ml</span>
+                    </div>
+                    <div class=" button-container">
+                        <button onclick="adicionarAgua(250)">+ 250ml</button>
+                        <button onclick="adicionarAgua(400)">+ 400ml</button>
+                        <div class="field label  large border">
+                            <input type="number" id="agua-custom">
+                            <label>Valor (ml)</label>
+                        </div>
+                    </div>
+                    <div class="button-container">
+                        <button onclick="adicionarAguaCustom()">Adicionar</button>
+                        <button onclick="resetarAgua()">Resetar</button>
+                    </div>
+                    <!-- esse card é do post -->
+                    <article class="no-padding  card-post">
+                        <div class="grid no-space">
+                            <div class="s6">
+                                <img class="responsive medium" src="../img/post0.jpg">
+                            </div>
+                            <div class="s6">
+                                <div class="padding">
+                                    <!-- <h5>Title</h5> -->
+                                    <span>Quanto de água devo beber?</span>
+                                    <nav>
+                                        <a href="../paginas/post.html?slug=importancia-da-hidratacao">
+                                            <button class="responsive border round">
+                                                Veja agora
+                                            </button>
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </article>
+            </div>
+            <!-- Calculadora de Gasto Calórico -->
+            <div class="page padding" id="tab3">
+                <article class="bg-dark">
+                    <h2>Calculadora de Gasto Calórico</h2>
+                    <form id="calculoForm">
+                        <div class="field label  large border">
+                            <input type="number" id="idade-calorias" required>
+                            <label>Idade</label>
+                        </div>
+                        <div class="field label  large border">
+                            <input type="number" id="peso-calorias" required>
+                            <label>Peso (kg)</label>
+                        </div>
+                        <div class="field label  large border">
+                            <input type="number" id="altura-calorias" required>
+                            <label>Altura (cm)</label>
+                        </div>
+                        <div class="medium-space"></div>
+                        <div class="row selecionar">
+                            <div class="field border round">
+                                <select id="sexo-calorias">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                </select>
+                                <i>arrow_drop_down</i>
+                            </div>
+                            <div class="field suffix border round">
+                                <select id="atividade-calorias">
+                                    <option value="1.2">Sedentário</option>
+                                    <option value="1.375">Levemente ativo</option>
+                                    <option value="1.55">Moderadamente ativo</option>
+                                    <option value="1.725">Altamente ativo</option>
+                                    <option value="1.9">Extremamente ativo</option>
+                                </select>
+                                <i>arrow_drop_down</i>
+                            </div>
+                        </div>
+                        <div class="medium-space"></div>
+                        <div class="medium-space"></div>
+                        <button class="botao-resultado" type="button"
+                            onclick="calcularGastoCalorico()">Calcular</button>
+                    </form>
+                    <p id="resultado-calorias"></p>
+                    <article class="no-padding  card-post">
+                        <div class="grid no-space">
+                            <div class="s6">
+                                <img class="responsive medium" src="../img/post3.jpg">
+                            </div>
+                            <div class="s6">
+                                <div class="padding">
+                                    <!-- <h5>Title</h5> -->
+                                    <span>Saiba como está o seu consumo calórico por dia:</span>
+                                    <nav>
+                                        <a href="../paginas/post.html?slug=gasto-calorico-diario">
+                                            <button class="responsive border round">
+                                                Veja agora
+                                            </button>
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </article>
+            </div>
+            <!-- Quiz de Emoções -->
+            <div class="page padding" id="tab4">
+                <article class="bg-dark">
+                    <div class="quiz-container">
+                        <h2>Quiz de Emoções</h2>
+                        <p>Como você está se sentindo hoje?</p>
+                        <div>
+                            <div class="row responsive  center-align middle-align">
+                                <img src="../img/animado.png" alt="Animado" class="emoji extra" title="Estou animado!"
+                                    onclick="calculateResult('animado')">
+                                <img src="../img/neutro.png" alt="Neutro" class="emoji extra" title="Estou neutro."
+                                    onclick="calculateResult('neutro')">
+                                <img src="../img/cansado.png" alt="Cansado" class="emoji extra" title="Estou cansado."
+                                    onclick="calculateResult('cansado')">
+                                <img src="../img/triste.png" alt="Triste" class="emoji extra" title="Estou triste."
+                                    onclick="calculateResult('triste')">
+                            </div>
+                            <div>
+
+                            </div>
+                            <div style="display: none;">
+                                <label>O que ocupa seus pensamentos ultimamente?</label><br>
+                                <select id="question2">
+                                    <option value="futuro">Futuro</option>
+                                    <option value="familia">Família</option>
+                                    <option value="trabalho">Trabalho</option>
+                                    <option value="lembrancas">Lembranças do passado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p id="result" style="font-size: 16px; font-style: italic;"></p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Lembre-se de beber água -->
+            <div class="page padding" id="tab5">
+                <article class="bg-dark">
+                    <h2>Lembre-se de beber água</h2>
+                    <p>Defina o tempo para receber a notificação:</p>
+
+                    <div class="input-lembre">
+                        <div class="field label large border">
+                            <input type="number" id="horas" min="0">
+                            <label>Horas</label>
+                        </div>
+                        <div class="field label  large border">
+                            <input type="number" id="minutos" min="0">
+                            <label>Minutos</label>
+                        </div>
+                        <div class="field label  large border">
+                            <input type="number" id="segundos" min="0">
+                            <label>Segundos</label>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <button class="botao-resultado" onclick="agendarNotificacao()">Agendar</button>
+
+                    <article class="no-padding  card-post">
+                        <div class="grid no-space">
+                            <div class="s6">
+                                <img class="responsive medium" src="../img/post2.jpg">
+                            </div>
+                            <div class="s6">
+                                <div class="padding">
+                                    <!-- <h5>Title</h5> -->
+                                    <span>A Importância da Hidratação:</span>
+                                    <nav>
+                                        <a href="../paginas/post.html?slug=importancia-da-hidratacao">
+                                            <button class="responsive border round">
+                                                Veja agora
+                                            </button>
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </article>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Importando o módulo PRINCIPAL-->
+        <!-- esse usa import e pacotes npm -->
+        <script type="module" src="../js/util/essencial.js"></script>
+
+        <!-- esse normal -->
+        <script src="../js/pagina/fitness.js"></script>
+        <script src="../js/pagina/fitness_frase.js"></script>
+        <script type="module" src="../js/util/essencial.js"></script>
+
+
+    </main>
+</body>
+
+</html>

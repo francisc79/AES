@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Estética e Saúde Academia">
+    <meta property="og:description" content="Uma breve descrição do site que aparece ao compartilhar.">
+    <title>Trainer: Estética e Saúde Academia</title>
+    <!-- css google -->
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/app.css">
+
+    <style>
+     li.li-card-min {
+    box-shadow: var(--elevate1) !important;
+    background-color: var(--surface-container-low) !important;
+    color: var(--on-surface) !important;
+    padding: 1rem !important;
+    border-radius: .75rem !important;
+    transition: transform var(--speed3), border-radius var(--speed3), padding var(--speed3) !important; 
+}
+    </style>
+</head>
+<!-- <body class="light"> -->
+<body >
+
+<!-- injetar header -->
+<div class="max responsive laranja" id="headerDINAMICO"></div>
+<!-- injetar painel -->
+<div id="painel-dinamico"></div>
+
+
+
+<!-- TAB IDS -->
+    <nav class="bottom inverse-primary">        
+        <div class="tabs responsive">
+            <!-- TABS ICNONES tuod dentro i é icone -->
+            <a class="active" data-ui="#tab1" tabindex="0"><i class="extra">fitness_center</i><span>Sequencias</span></a>
+            <a data-ui="#tab2" tabindex="0" class=""><i class="extra">dishwasher_gen</i><span>Treinos<span></a>
+            <a  data-ui="#tab3" tabindex="0" class=""><i class="extra">monitoring</i><span>Tabela</span></a>
+     </div>
+    </nav>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <main class="responsive black">
+
+ 
+        <div class="medium-space"></div>
+
+        <!--TAB VIEWR-->
+        <div>
+            <!-- Calculadora de IMC -->
+            <div class="page padding active" id="tab1">
+
+              <!-- BTN add novo treino -->
+                <article class="borda" data-ui="#addNovaSeq" style="
+                margin: 18px;
+            ">
+                  <h5>+Adicionar Nova Sequencia</h5>
+                
+                </article>
+                
+                
+                <div class="overlay blur"></div>
+                <!-- ADD SEQ DIALOG -->
+                <dialog id="addNovaSeq">
+                  <div class="field label border responsive">
+                    <input type="text" id="input_Seq">
+                    <label>Criar nova Sequência</label>
+                  </div>
+                  <nav class="right-align no-space">
+                    <button class="transparent link" data-ui="#addNovaSeq">Cancelar</button>
+                    <button class="transparent link" data-ui="#addNovaSeq" id="btn_salvarSeq">Salvar</button>
+                  </nav>
+                </dialog>
+
+
+
+                <!-- div injetar coteudo dinamico -->
+
+                <div class="lista_de_sequecias"></div>
+
+
+
+
+             <!-- exemplo base dos cards -->
+                <!-- <article class="bg-dark">
+                    <h5>Sequencia 1</h5>
+                 <div class="space"></div>
+                    <div class="tas responsive">
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>treino 1</span>
+                      </button>
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>treino 2</span>
+                      </button>
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>treino 3</span>
+                      </button>
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>treino 4</span>
+                      </button>
+                      <button class="chip fill">
+                        <i>done</i>
+                        <span>..+5</span>
+                      </button>
+                     </div>
+                  </article> -->
+
+      
+
+
+            </div>
+            <!-- Contador de água -->
+            <div class="page padding" id="tab2">
+              <article class="secondary-container">
+
+                <h6 class="nome_sequencia">Sequencia 0</h6>
+                <h9 class="count_exercicio">0 Exercícios</h9>
+
+
+                <!-- div injetar coteudo dinamico -->
+                 <!-- <ul>  <li>
+                  <article style="width: 30rem;">
+                    <nav class="responsive">
+                      <button class="circle">A</button>
+                      <h6 class="max">Treino 1</h6>
+                      <button class="circle transparent">
+                        <i>more_vert</i>
+                    </button>
+                    </nav>
+                   
+                    <div class="grid">                            
+                      <div class="s12 m12 l6">
+                        <span>4 series </span>
+                      </div>
+                      <div class="s12 m12 l6">
+                        <span>8 repetições</span>
+                      </div>
+                      <div class="s12 m12 l6">
+                        <span>3 carga </span>
+                      </div>
+                      <div class="s12 m12 l6">
+                        <span> </span>
+                      </div>
+                    </div>
+
+                  
+                  
+                  
+                </article>
+                </li></ul> -->
+       
+                <ul class="list border lista_de_exercicios">
+                
+
+                  <!-- <li class="li-card-min ">
+                   
+                    <button class="circle">A</button>
+                    <div class="max responsive">
+                      <h6 class="small">Treino 1</h6>
+                      <nav>
+                        <span>4 series </span>X
+                        <span>8 repetições</span>X
+                        <span>3 carga </span> 
+                      </nav>
+                    </div>
+                    <button class="small " style=" width: min-content;">editar</button>
+                   
+                  </li> -->
+                  </ul>
+
+            </article>
+            </div>
+            <!-- Calculadora de Gasto Calórico -->
+
+
+
+            <div class="page padding " id="tab3">
+              <article class="secondary-container">
+                <style>
+                  table {
+                    border-collapse: collapse;
+                    width: 90%;
+                    /* Ajuste conforme necessário */
+                    margin-bottom: 20px;
+                    /* Espaço entre as tabelas */
+                    font-family: sans-serif;
+                    border: 1px solid #ddd;
+                    /* Adiciona uma borda geral à tabela */
+                  }
+                  caption {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    margin-bottom: 5px;
+                    text-align: left;
+                    padding: 8px;
+                    /* Adiciona padding ao caption */
+                    caption-side: top;
+                    /* Garante que o caption fica em cima */
+                  }
+                  th,
+                  td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                  }
+                  th {
+                    background-color: #f2f2f2;
+                    font-weight: bold;
+                  }
+                  /* Estilo para linhas pares dentro do tbody para "listras" */
+                  tbody tr:nth-child(even) {
+                    background-color: #f9f9f9;
+                  }
+                  /* Remove a borda do caption se a borda da tabela for suficiente */
+                  /* caption { border: none; } */
+                </style>
+                <div id="container-da-tabela"></div>
+              </article>
+               
+            </div>
+          
+           
+        </div>
+
+
+
+        <!-- Importando o módulo PRINCIPAL-->
+        <script type="module" src="../js/util/essencial.js"></script>
+        <script src="../js/pagina/fitness.js"></script>
+        <!-- <script src="../js/pagina/fitness_frase.js"></script> -->
+        <script type="module" src="../js/pagina/trainer.js"></script>
+    
+
+    </main>
+
+
+
+<!-- FAB -->
+<div id="fab_add_treino" class="bottom   extra"  style="position: fixed;bottom: 96px;z-index: 101;right: 70px;display: block;">
+    <button class="extra large-elevate  tertiary" data-ui="#treinoDiaglog" style="
+    inline-size: auto;
+    padding: 0 1.5rem;
+">
+        <i>add</i>
+        <span>Add treino</span>
+    </button>
+</div>
+
+
+
+
+
+
+   <!-- TREINO DIALOG -->
+   <div class="overlay blur"></div>
+<dialog id="treinoDiaglog" >
+   
+    <fieldset>
+      <legend>Criar Rotina de Treino</legend>
+      <nav class="vertical  center-align middle-align">
+        <!-- <div class="max">
+                  <h6 class=" ">Headline</h6>
+                  <div>Supporting text</div>
+              </div> -->
+  
+  
+        <div class="field  middle-align">
+          <div class="row">
+            <div class="field large   label border  responsive   active">
+              <input id="input_treinoNome" class="searchBox">
+              <label>Adicionar Exercício</label>
+              <!-- lista dinamica -->
+              <menu id="menuTreinos" class="min" style="top: 4rem;">
+  
+              </menu>
+            </div>
+          </div>
+        </div>
+  
+  
+        <!-- <legend>Adicionar Repetições</legend> -->
+        <div class="row responsive  middle-align">
+          <button class="border square round" id="btn-rep-add">
+            <i>add</i> </button>
+          <div class="field label border round">
+            <input type="number" value="0" id="inp_repeticao">
+            <label>Repetições</label>
+          </div>
+          <button class="border square round" id="btn-rep-remove">
+            <i>remove</i> </button>
+        </div>
+  
+        <!-- <legend>Adicionar Series</legend> -->
+        <div class="row responsive  middle-align">
+          <button class="border square round" id="btn-series-add">
+            <i>add</i> </button>
+          <div class="field label border round">
+            <input type="number" value="0" id="inp_series">
+            <label>Series</label>
+          </div>
+          <button class="border square round" id="btn-series-remove">
+            <i>remove</i> </button>
+        </div>
+  
+        <!-- <legend>Adicionar Carga</legend> -->
+        <div class="row responsive  middle-align">
+          <button class="border square round" id="btn-carga-add">
+            <i>add</i> </button>
+          <div class="field label border round">
+            <input type="number" value="0" id="inp_carga">
+            <label>Carga</label>
+          </div>
+          <button class="border square round" id="btn-carga-remove">
+            <i>remove</i> </button>
+        </div>
+   
+  
+        <!-- <label>Dias de Treino</label> -->
+        <!-- dias -->
+        <!-- <nav class=" center-align middle-align">
+          <div class="vertical" style=" align-items: center;">
+            <span>Seg</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Ter</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Qua</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Qui</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Sex</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Sab</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+          <div class="vertical" style=" align-items: center;">
+            <span>Dom</span>
+            <label class="checkbox">
+              <input type="checkbox"><span></span>
+            </label>
+          </div>
+        </nav> -->
+      </nav>
+    </fieldset>
+    <!--  -->
+  
+    <nav class="responsive ">
+      <button class="transparent link  " data-ui="#treinoDiaglog">Cancelar</button>
+      <button class="transparent link  " data-ui="#treinoDiaglog" id="btn_salvarTreino">Salvar</button>
+    </nav>
+  
+</dialog>
+ 
+  
+
+
+</body>
+
+</html>
